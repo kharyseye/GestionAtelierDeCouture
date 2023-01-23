@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.3.32929.385
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Gestion_Atelier_Couture", "Gestion_Atelier_Couture.csproj", "{83F334BF-5C9E-4E6B-A9DF-C50E151425B8}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{83F334BF-5C9E-4E6B-A9DF-C50E151425B8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{83F334BF-5C9E-4E6B-A9DF-C50E151425B8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{83F334BF-5C9E-4E6B-A9DF-C50E151425B8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{83F334BF-5C9E-4E6B-A9DF-C50E151425B8}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {8DB89C9A-9025-4E82-A9F0-531F7840A475}
+	EndGlobalSection
+EndGlobal

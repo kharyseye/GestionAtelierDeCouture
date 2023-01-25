@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="bdgestcouturModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="Client">
+    <Key>
+      <PropertyRef Name="idPers" />
+    </Key>
+    <Property Name="idPers" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Genre" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+  </EntityType>
+  <EntityType Name="Personne">
+    <Key>
+      <PropertyRef Name="idPers" />
+    </Key>
+    <Property Name="idPers" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="NomPers" Type="String" MaxLength="80" FixedLength="true" Unicode="true" />
+    <Property Name="PrenomPers" Type="String" MaxLength="80" FixedLength="true" Unicode="true" />
+    <Property Name="AdressPers" Type="String" MaxLength="150" FixedLength="true" Unicode="true" />
+    <Property Name="TelPers" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+    <Property Name="EmailPers" Type="String" MaxLength="80" FixedLength="true" Unicode="true" />
+  </EntityType>
+  <EntityContainer Name="bdgescouturEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Client" EntityType="Self.Client" />
+    <EntitySet Name="Personne" EntityType="Self.Personne" />
+    <EntitySet Name="ViewClient" EntityType="bdgestcouturModel.ViewClient" />
+  </EntityContainer>
+  <EntityType Name="ViewClient">
+    <Key>
+      <PropertyRef Name="idPers" />
+    </Key>
+    <Property Name="idPers" Type="Int32" Nullable="false" />
+    <Property Name="NomPers" Type="String" MaxLength="80" FixedLength="true" Unicode="true" />
+    <Property Name="PrenomPers" Type="String" MaxLength="80" FixedLength="true" Unicode="true" />
+    <Property Name="AdressPers" Type="String" MaxLength="150" FixedLength="true" Unicode="true" />
+    <Property Name="TelPers" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+    <Property Name="EmailPers" Type="String" MaxLength="80" FixedLength="true" Unicode="true" />
+    <Property Name="Genre" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+  </EntityType>
+</Schema>

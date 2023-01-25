@@ -7,18 +7,36 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using Gestion_Atelier_Couture.Model;
+using Gestion_Atelier_Couture.model;
+
+
 
 namespace Gestion_Atelier_Couture
 {
     public partial class FrmClient : Form
     {
-       bdCoutureEntities db = new bdCoutureEntities();
+        bdgescouturEntities db;
         public FrmClient()
         {
             InitializeComponent();
         }
 
+        private void FrmClient_Load(object sender, EventArgs e)
+        {
+            db = new bdgescouturEntities();
+            dgvClient.DataSource = db.ViewClient.ToList();
+        }
+        private void effacer()
+        {
+            txtNom.Text = string.Empty;
+            txtPrenom.Text = string.Empty;
+            txtAdresse.Text = string.Empty;
+            txtEmail.Text = string.Empty;
+            txtTelephone.Text = string.Empty;
+            cbbGenre.Text = string.Empty;
+            dgvClient.DataSource = db.ViewClient.ToList();
+            txtNom.Focus();
+        }
         private void label2_Click(object sender, EventArgs e)
         {
 
@@ -31,7 +49,15 @@ namespace Gestion_Atelier_Couture
 
         private void btnSupprimer_Click(object sender, EventArgs e)
         {
-
+            int? id = int.Parse(dgvClient.CurrentRow.Cells[0].Value.ToString());
+            Personne p = db.Personne.Find(id);
+            db.Personne.Remove(p);
+            db.SaveChanges();
+            Client c = db.Client.Find(id);
+            db.Client.Remove(c);
+            db.SaveChanges();
+            MessageBox.Show("supprimé evec succes");
+            effacer();
         }
 
         private void NomTb_TextChanged(object sender, EventArgs e)
@@ -54,36 +80,69 @@ namespace Gestion_Atelier_Couture
 
         }
 
-
-
-        private void FrmClient_Load(object sender, EventArgs e)
-        {
-           
-
-        }
-
         private void btnAjouter_Click(object sender, EventArgs e)
         {
-          Personne p = new Personne();
-          Client c = new Client();
+            Personne p = new Personne();
             p.NomPers = txtNom.Text;
-            p.PrenomPers= txtPrenom.Text;
-            p.AdressePers= txtAdresse.Text;
-            p.EmailPers= txtEmail.Text;
-            p.TelPers = txtEmail.Text;
-          
+            p.PrenomPers = txtPrenom.Text;
+            p.AdressPers = txtAdresse.Text;
+            p.TelPers = txtTelephone.Text;
+            p.EmailPers = txtEmail.Text;
             db.Personne.Add(p);
             db.SaveChanges();
-            var id = db.Personne.Max(x=> x.Id );
-            c.Id = id;
+
+            Client c = new Client();
+            c.idPers = p.idPers;
             c.Genre = cbbGenre.Text;
             db.Client.Add(c);
             db.SaveChanges();
-            MessageBox.Show("Ajouté avec succés");
-            
+            MessageBox.Show("ajouté evec succes");
+            effacer();
+        }
+
+        private void cbbGenre_SelectedIndexChanged(object sender, EventArgs e)
+        {
 
         }
 
-       
+        private void dgvClient_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void btnChoisir_Click(object sender, EventArgs e)
+        {
+            txtNom.Text = dgvClient.CurrentRow.Cells[1].Value.ToString();
+            txtPrenom.Text = dgvClient.CurrentRow.Cells[2].Value.ToString();
+            txtAdresse.Text = dgvClient.CurrentRow.Cells[3].Value.ToString();
+            txtTelephone.Text = dgvClient.CurrentRow.Cells[4].Value.ToString();
+            txtEmail.Text = dgvClient.CurrentRow.Cells[5].Value.ToString();
+            cbbGenre.Text = dgvClient.CurrentRow.Cells[6].Value.ToString();
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            int? id = int.Parse(dgvClient.CurrentRow.Cells [0].Value.ToString());
+            Personne p = db.Personne.Find(id);
+            p.NomPers = txtNom.Text;
+            p.PrenomPers = txtPrenom.Text;
+            p.AdressPers = txtAdresse.Text;
+            p.EmailPers = txtEmail.Text;
+            p.TelPers = txtTelephone.Text;
+            db.SaveChanges();
+
+            Client c = db.Client.Find(id);
+            c.idPers = p.idPers;
+            c.Genre = cbbGenre.Text;
+            MessageBox.Show("modification enregistré");
+            db.SaveChanges();
+            effacer();
+
+        }
+
+        private void dgvClient_CellContentClick_1(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }

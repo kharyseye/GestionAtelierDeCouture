@@ -7,18 +7,18 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Gestion_Atelier_Couture.Model
+namespace Gestion_Atelier_Couture.model
 {
     using System;
     using System.Collections.Generic;
     
     public partial class Personne
     {
-        public int Id { get; set; }
+        public int idPers { get; set; }
         public string NomPers { get; set; }
         public string PrenomPers { get; set; }
+        public string AdressPers { get; set; }
         public string TelPers { get; set; }
         public string EmailPers { get; set; }
-        public string AdressePers { get; set; }
     }
 }

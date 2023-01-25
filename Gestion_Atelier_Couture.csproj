@@ -55,11 +55,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="bdCoutureDataSet.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>bdCoutureDataSet.xsd</DependentUpon>
-    </Compile>
     <Compile Include="Connexion.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -78,29 +73,29 @@
     <Compile Include="FrmMesure.Designer.cs">
       <DependentUpon>FrmMesure.cs</DependentUpon>
     </Compile>
-    <Compile Include="Model\Client.cs">
-      <DependentUpon>Modelbdcouture.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Model\Modelbdcouture.Context.cs">
+    <Compile Include="model\bdgestcoutur.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>Modelbdcouture.Context.tt</DependentUpon>
+      <DependentUpon>bdgestcoutur.Context.tt</DependentUpon>
     </Compile>
-    <Compile Include="Model\Modelbdcouture.cs">
+    <Compile Include="model\bdgestcoutur.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>Modelbdcouture.tt</DependentUpon>
+      <DependentUpon>bdgestcoutur.tt</DependentUpon>
     </Compile>
-    <Compile Include="Model\Modelbdcouture.Designer.cs">
+    <Compile Include="model\bdgestcoutur.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>Modelbdcouture.edmx</DependentUpon>
+      <DependentUpon>bdgestcoutur.edmx</DependentUpon>
     </Compile>
-    <Compile Include="Model\Personne.cs">
-      <DependentUpon>Modelbdcouture.tt</DependentUpon>
+    <Compile Include="model\Client.cs">
+      <DependentUpon>bdgestcoutur.tt</DependentUpon>
     </Compile>
-    <Compile Include="Model\sysdiagrams.cs">
-      <DependentUpon>Modelbdcouture.tt</DependentUpon>
+    <Compile Include="model\Personne.cs">
+      <DependentUpon>bdgestcoutur.tt</DependentUpon>
+    </Compile>
+    <Compile Include="model\ViewClient.cs">
+      <DependentUpon>bdgestcoutur.tt</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -122,23 +117,12 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <EntityDeploy Include="Model\Modelbdcouture.edmx">
+    <EntityDeploy Include="model\bdgestcoutur.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>Modelbdcouture.Designer.cs</LastGenOutput>
+      <LastGenOutput>bdgestcoutur.Designer.cs</LastGenOutput>
     </EntityDeploy>
-    <None Include="bdCoutureDataSet.xsc">
-      <DependentUpon>bdCoutureDataSet.xsd</DependentUpon>
-    </None>
-    <None Include="bdCoutureDataSet.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>bdCoutureDataSet.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="bdCoutureDataSet.xss">
-      <DependentUpon>bdCoutureDataSet.xsd</DependentUpon>
-    </None>
-    <None Include="Model\Modelbdcouture.edmx.diagram">
-      <DependentUpon>Modelbdcouture.edmx</DependentUpon>
+    <None Include="model\bdgestcoutur.edmx.diagram">
+      <DependentUpon>bdgestcoutur.edmx</DependentUpon>
     </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
@@ -156,19 +140,19 @@
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
-    <Content Include="Model\Modelbdcouture.Context.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <LastGenOutput>Modelbdcouture.Context.cs</LastGenOutput>
-      <DependentUpon>Modelbdcouture.edmx</DependentUpon>
-    </Content>
-    <Content Include="Model\Modelbdcouture.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>Modelbdcouture.edmx</DependentUpon>
-      <LastGenOutput>Modelbdcouture.cs</LastGenOutput>
-    </Content>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <ItemGroup>
-    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+    <Content Include="model\bdgestcoutur.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>bdgestcoutur.edmx</DependentUpon>
+      <LastGenOutput>bdgestcoutur.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="model\bdgestcoutur.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>bdgestcoutur.edmx</DependentUpon>
+      <LastGenOutput>bdgestcoutur.cs</LastGenOutput>
+    </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

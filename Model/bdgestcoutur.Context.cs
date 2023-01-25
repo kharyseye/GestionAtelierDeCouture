@@ -7,16 +7,16 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Gestion_Atelier_Couture.Model
+namespace Gestion_Atelier_Couture.model
 {
     using System;
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
-    public partial class bdCoutureEntities : DbContext
+    public partial class bdgescouturEntities : DbContext
     {
-        public bdCoutureEntities()
-            : base("name=bdCoutureEntities")
+        public bdgescouturEntities()
+            : base("name=bdgescouturEntities")
         {
         }
     
@@ -25,8 +25,8 @@ namespace Gestion_Atelier_Couture.Model
             throw new UnintentionalCodeFirstException();
         }
     
-        public virtual DbSet<Personne> Personne { get; set; }
-        public virtual DbSet<sysdiagrams> sysdiagrams { get; set; }
         public virtual DbSet<Client> Client { get; set; }
+        public virtual DbSet<Personne> Personne { get; set; }
+        public virtual DbSet<ViewClient> ViewClient { get; set; }
     }
 }

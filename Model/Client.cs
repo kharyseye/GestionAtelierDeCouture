@@ -7,14 +7,14 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Gestion_Atelier_Couture.Model
+namespace Gestion_Atelier_Couture.model
 {
     using System;
     using System.Collections.Generic;
     
     public partial class Client
     {
-        public int Id { get; set; }
+        public int idPers { get; set; }
         public string Genre { get; set; }
     }
 }

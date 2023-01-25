@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmClient));
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnDeconnexion = new System.Windows.Forms.Button();
@@ -55,33 +54,14 @@
             this.cbbGenre = new System.Windows.Forms.ComboBox();
             this.btnAjouter = new System.Windows.Forms.Button();
             this.btnSupprimer = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
+            this.btnChoisir = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
-            this.dgClient = new System.Windows.Forms.DataGridView();
             this.label7 = new System.Windows.Forms.Label();
-            this.bdCoutureDataSet = new Gestion_Atelier_Couture.bdCoutureDataSet();
-            this.bdCoutureDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.personneBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.personneTableAdapter = new Gestion_Atelier_Couture.bdCoutureDataSetTableAdapters.PersonneTableAdapter();
-            this.clientBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.clientTableAdapter = new Gestion_Atelier_Couture.bdCoutureDataSetTableAdapters.ClientTableAdapter();
-            this.clientBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
-            this.nom = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.prenom = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.email = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.adresse = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.telephone = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.genre = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgvClient = new System.Windows.Forms.DataGridView();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgClient)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bdCoutureDataSet)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bdCoutureDataSetBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.personneBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.clientBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.clientBindingSource1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvClient)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -356,6 +336,7 @@
             this.cbbGenre.Name = "cbbGenre";
             this.cbbGenre.Size = new System.Drawing.Size(121, 26);
             this.cbbGenre.TabIndex = 26;
+            this.cbbGenre.SelectedIndexChanged += new System.EventHandler(this.cbbGenre_SelectedIndexChanged);
             // 
             // btnAjouter
             // 
@@ -377,7 +358,7 @@
             this.btnSupprimer.FlatAppearance.BorderSize = 0;
             this.btnSupprimer.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSupprimer.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(70)))), ((int)(((byte)(144)))));
-            this.btnSupprimer.Location = new System.Drawing.Point(712, 205);
+            this.btnSupprimer.Location = new System.Drawing.Point(786, 156);
             this.btnSupprimer.Name = "btnSupprimer";
             this.btnSupprimer.Size = new System.Drawing.Size(129, 32);
             this.btnSupprimer.TabIndex = 28;
@@ -385,31 +366,19 @@
             this.btnSupprimer.UseVisualStyleBackColor = false;
             this.btnSupprimer.Click += new System.EventHandler(this.btnSupprimer_Click);
             // 
-            // button3
+            // btnChoisir
             // 
-            this.button3.BackColor = System.Drawing.Color.Orange;
-            this.button3.FlatAppearance.BorderSize = 0;
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(70)))), ((int)(((byte)(144)))));
-            this.button3.Location = new System.Drawing.Point(786, 157);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(129, 32);
-            this.button3.TabIndex = 29;
-            this.button3.Text = "Choisir";
-            this.button3.UseVisualStyleBackColor = false;
-            // 
-            // button4
-            // 
-            this.button4.BackColor = System.Drawing.Color.Orange;
-            this.button4.FlatAppearance.BorderSize = 0;
-            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(70)))), ((int)(((byte)(144)))));
-            this.button4.Location = new System.Drawing.Point(639, 157);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(129, 32);
-            this.button4.TabIndex = 30;
-            this.button4.Text = "Lister";
-            this.button4.UseVisualStyleBackColor = false;
+            this.btnChoisir.BackColor = System.Drawing.Color.Orange;
+            this.btnChoisir.FlatAppearance.BorderSize = 0;
+            this.btnChoisir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnChoisir.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(70)))), ((int)(((byte)(144)))));
+            this.btnChoisir.Location = new System.Drawing.Point(639, 157);
+            this.btnChoisir.Name = "btnChoisir";
+            this.btnChoisir.Size = new System.Drawing.Size(129, 32);
+            this.btnChoisir.TabIndex = 29;
+            this.btnChoisir.Text = "Choisir";
+            this.btnChoisir.UseVisualStyleBackColor = false;
+            this.btnChoisir.Click += new System.EventHandler(this.btnChoisir_Click);
             // 
             // button5
             // 
@@ -423,21 +392,7 @@
             this.button5.TabIndex = 31;
             this.button5.Text = "Modifier";
             this.button5.UseVisualStyleBackColor = false;
-            // 
-            // dgClient
-            // 
-            this.dgClient.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgClient.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.nom,
-            this.prenom,
-            this.email,
-            this.adresse,
-            this.telephone,
-            this.genre});
-            this.dgClient.Location = new System.Drawing.Point(206, 282);
-            this.dgClient.Name = "dgClient";
-            this.dgClient.Size = new System.Drawing.Size(709, 200);
-            this.dgClient.TabIndex = 32;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
             // label7
             // 
@@ -450,79 +405,24 @@
             this.label7.TabIndex = 33;
             this.label7.Text = "Liste des Clients";
             // 
-            // bdCoutureDataSet
+            // dgvClient
             // 
-            this.bdCoutureDataSet.DataSetName = "bdCoutureDataSet";
-            this.bdCoutureDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // bdCoutureDataSetBindingSource
-            // 
-            this.bdCoutureDataSetBindingSource.DataSource = this.bdCoutureDataSet;
-            this.bdCoutureDataSetBindingSource.Position = 0;
-            // 
-            // personneBindingSource
-            // 
-            this.personneBindingSource.DataMember = "Personne";
-            this.personneBindingSource.DataSource = this.bdCoutureDataSet;
-            // 
-            // personneTableAdapter
-            // 
-            this.personneTableAdapter.ClearBeforeFill = true;
-            // 
-            // clientBindingSource
-            // 
-            this.clientBindingSource.DataMember = "Client";
-            this.clientBindingSource.DataSource = this.bdCoutureDataSetBindingSource;
-            // 
-            // clientTableAdapter
-            // 
-            this.clientTableAdapter.ClearBeforeFill = true;
-            // 
-            // clientBindingSource1
-            // 
-            this.clientBindingSource1.DataMember = "Client";
-            this.clientBindingSource1.DataSource = this.bdCoutureDataSetBindingSource;
-            // 
-            // nom
-            // 
-            this.nom.HeaderText = "Nom";
-            this.nom.Name = "nom";
-            // 
-            // prenom
-            // 
-            this.prenom.HeaderText = "Prenom";
-            this.prenom.Name = "prenom";
-            // 
-            // email
-            // 
-            this.email.HeaderText = "Email";
-            this.email.Name = "email";
-            // 
-            // adresse
-            // 
-            this.adresse.HeaderText = "Adresse";
-            this.adresse.Name = "adresse";
-            // 
-            // telephone
-            // 
-            this.telephone.HeaderText = "Téléphone";
-            this.telephone.Name = "telephone";
-            // 
-            // genre
-            // 
-            this.genre.HeaderText = "Genre";
-            this.genre.Name = "genre";
+            this.dgvClient.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvClient.Location = new System.Drawing.Point(222, 278);
+            this.dgvClient.Name = "dgvClient";
+            this.dgvClient.Size = new System.Drawing.Size(693, 216);
+            this.dgvClient.TabIndex = 34;
+            this.dgvClient.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvClient_CellContentClick_1);
             // 
             // FrmClient
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(928, 494);
+            this.Controls.Add(this.dgvClient);
             this.Controls.Add(this.label7);
-            this.Controls.Add(this.dgClient);
             this.Controls.Add(this.button5);
-            this.Controls.Add(this.button4);
-            this.Controls.Add(this.button3);
+            this.Controls.Add(this.btnChoisir);
             this.Controls.Add(this.btnSupprimer);
             this.Controls.Add(this.btnAjouter);
             this.Controls.Add(this.cbbGenre);
@@ -549,12 +449,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgClient)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bdCoutureDataSet)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bdCoutureDataSetBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.personneBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.clientBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.clientBindingSource1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvClient)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -579,10 +474,8 @@
         private System.Windows.Forms.ComboBox cbbGenre;
         private System.Windows.Forms.Button btnAjouter;
         private System.Windows.Forms.Button btnSupprimer;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button btnChoisir;
         private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.DataGridView dgClient;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button btnMesure;
@@ -593,17 +486,9 @@
         private System.Windows.Forms.Button btnParametre;
         private System.Windows.Forms.Button btnDeconnexion;
         private System.Windows.Forms.BindingSource bdCoutureDataSetBindingSource;
-        private bdCoutureDataSet bdCoutureDataSet;
         private System.Windows.Forms.BindingSource personneBindingSource;
-        private bdCoutureDataSetTableAdapters.PersonneTableAdapter personneTableAdapter;
         private System.Windows.Forms.BindingSource clientBindingSource;
-        private bdCoutureDataSetTableAdapters.ClientTableAdapter clientTableAdapter;
         private System.Windows.Forms.BindingSource clientBindingSource1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn nom;
-        private System.Windows.Forms.DataGridViewTextBoxColumn prenom;
-        private System.Windows.Forms.DataGridViewTextBoxColumn email;
-        private System.Windows.Forms.DataGridViewTextBoxColumn adresse;
-        private System.Windows.Forms.DataGridViewTextBoxColumn telephone;
-        private System.Windows.Forms.DataGridViewTextBoxColumn genre;
+        private System.Windows.Forms.DataGridView dgvClient;
     }
 }

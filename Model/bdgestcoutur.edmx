@@ -1,0 +1,156 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="bdgestcouturModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="Client">
+          <Key>
+            <PropertyRef Name="idPers" />
+          </Key>
+          <Property Name="idPers" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Genre" Type="nchar" MaxLength="10" />
+        </EntityType>
+        <EntityType Name="Personne">
+          <Key>
+            <PropertyRef Name="idPers" />
+          </Key>
+          <Property Name="idPers" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="NomPers" Type="nchar" MaxLength="80" />
+          <Property Name="PrenomPers" Type="nchar" MaxLength="80" />
+          <Property Name="AdressPers" Type="nchar" MaxLength="150" />
+          <Property Name="TelPers" Type="nchar" MaxLength="10" />
+          <Property Name="EmailPers" Type="nchar" MaxLength="80" />
+        </EntityType>
+        <!--Erreurs détectées durant la génération :
+avertissement 6002: La table/vue 'bdgestcoutur.dbo.ViewClient' n'a pas de clé primaire définie. La clé a été déduite et la définition a été créée en tant que table/vue en lecture seule.-->
+        <EntityType Name="ViewClient">
+          <Key>
+            <PropertyRef Name="idPers" />
+          </Key>
+          <Property Name="idPers" Type="int" Nullable="false" />
+          <Property Name="NomPers" Type="nchar" MaxLength="80" />
+          <Property Name="PrenomPers" Type="nchar" MaxLength="80" />
+          <Property Name="AdressPers" Type="nchar" MaxLength="150" />
+          <Property Name="TelPers" Type="nchar" MaxLength="10" />
+          <Property Name="EmailPers" Type="nchar" MaxLength="80" />
+          <Property Name="Genre" Type="nchar" MaxLength="10" />
+        </EntityType>
+        <EntityContainer Name="bdgestcouturModelStoreContainer">
+          <EntitySet Name="Client" EntityType="Self.Client" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Personne" EntityType="Self.Personne" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="ViewClient" EntityType="Self.ViewClient" store:Type="Views" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [ViewClient].[idPers] AS [idPers], 
+    [ViewClient].[NomPers] AS [NomPers], 
+    [ViewClient].[PrenomPers] AS [PrenomPers], 
+    [ViewClient].[AdressPers] AS [AdressPers], 
+    [ViewClient].[TelPers] AS [TelPers], 
+    [ViewClient].[EmailPers] AS [EmailPers], 
+    [ViewClient].[Genre] AS [Genre]
+    FROM [dbo].[ViewClient] AS [ViewClient]</DefiningQuery>
+          </EntitySet>
+        </EntityContainer>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="bdgestcouturModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="Client">
+          <Key>
+            <PropertyRef Name="idPers" />
+          </Key>
+          <Property Name="idPers" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Genre" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+        </EntityType>
+        <EntityType Name="Personne">
+          <Key>
+            <PropertyRef Name="idPers" />
+          </Key>
+          <Property Name="idPers" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="NomPers" Type="String" MaxLength="80" FixedLength="true" Unicode="true" />
+          <Property Name="PrenomPers" Type="String" MaxLength="80" FixedLength="true" Unicode="true" />
+          <Property Name="AdressPers" Type="String" MaxLength="150" FixedLength="true" Unicode="true" />
+          <Property Name="TelPers" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+          <Property Name="EmailPers" Type="String" MaxLength="80" FixedLength="true" Unicode="true" />
+        </EntityType>
+        <EntityContainer Name="bdgescouturEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="Client" EntityType="Self.Client" />
+          <EntitySet Name="Personne" EntityType="Self.Personne" />
+          <EntitySet Name="ViewClient" EntityType="bdgestcouturModel.ViewClient" />
+        </EntityContainer>
+        <EntityType Name="ViewClient">
+          <Key>
+            <PropertyRef Name="idPers" />
+          </Key>
+          <Property Name="idPers" Type="Int32" Nullable="false" />
+          <Property Name="NomPers" Type="String" MaxLength="80" FixedLength="true" Unicode="true" />
+          <Property Name="PrenomPers" Type="String" MaxLength="80" FixedLength="true" Unicode="true" />
+          <Property Name="AdressPers" Type="String" MaxLength="150" FixedLength="true" Unicode="true" />
+          <Property Name="TelPers" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+          <Property Name="EmailPers" Type="String" MaxLength="80" FixedLength="true" Unicode="true" />
+          <Property Name="Genre" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+        </EntityType>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="bdgestcouturModelStoreContainer" CdmEntityContainer="bdgescouturEntities">
+          <EntitySetMapping Name="Client">
+            <EntityTypeMapping TypeName="bdgestcouturModel.Client">
+              <MappingFragment StoreEntitySet="Client">
+                <ScalarProperty Name="idPers" ColumnName="idPers" />
+                <ScalarProperty Name="Genre" ColumnName="Genre" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Personne">
+            <EntityTypeMapping TypeName="bdgestcouturModel.Personne">
+              <MappingFragment StoreEntitySet="Personne">
+                <ScalarProperty Name="idPers" ColumnName="idPers" />
+                <ScalarProperty Name="NomPers" ColumnName="NomPers" />
+                <ScalarProperty Name="PrenomPers" ColumnName="PrenomPers" />
+                <ScalarProperty Name="AdressPers" ColumnName="AdressPers" />
+                <ScalarProperty Name="TelPers" ColumnName="TelPers" />
+                <ScalarProperty Name="EmailPers" ColumnName="EmailPers" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ViewClient">
+            <EntityTypeMapping TypeName="bdgestcouturModel.ViewClient">
+              <MappingFragment StoreEntitySet="ViewClient">
+                <ScalarProperty Name="Genre" ColumnName="Genre" />
+                <ScalarProperty Name="EmailPers" ColumnName="EmailPers" />
+                <ScalarProperty Name="TelPers" ColumnName="TelPers" />
+                <ScalarProperty Name="AdressPers" ColumnName="AdressPers" />
+                <ScalarProperty Name="PrenomPers" ColumnName="PrenomPers" />
+                <ScalarProperty Name="NomPers" ColumnName="NomPers" />
+                <ScalarProperty Name="idPers" ColumnName="idPers" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="false" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="Aucun" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

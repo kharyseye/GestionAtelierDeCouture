@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="bdgestcouturModelStoreContainer" CdmEntityContainer="bdgestcouturEntities">
+    <EntitySetMapping Name="Client">
+      <EntityTypeMapping TypeName="bdgestcouturModel.Client">
+        <MappingFragment StoreEntitySet="Client">
+          <ScalarProperty Name="idPers" ColumnName="idPers" />
+          <ScalarProperty Name="Genre" ColumnName="Genre" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Personne">
+      <EntityTypeMapping TypeName="bdgestcouturModel.Personne">
+        <MappingFragment StoreEntitySet="Personne">
+          <ScalarProperty Name="idPers" ColumnName="idPers" />
+          <ScalarProperty Name="NomPers" ColumnName="NomPers" />
+          <ScalarProperty Name="PrenomPers" ColumnName="PrenomPers" />
+          <ScalarProperty Name="AdressPers" ColumnName="AdressPers" />
+          <ScalarProperty Name="TelPers" ColumnName="TelPers" />
+          <ScalarProperty Name="EmailPers" ColumnName="EmailPers" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

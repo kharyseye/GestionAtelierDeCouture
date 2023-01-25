@@ -184,7 +184,7 @@
   <data name="btnCommande.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAA
-        qwAAAKsB1E2SqwAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAANYSURBVEhLrZVL
+        qAAAAKgBefSzxgAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAANYSURBVEhLrZVL
         TxNRHMVZufEbuHXpQuMHcOHORHwu3RsVFUERRJFnSEDQaIOBCoryalAQKCAgD9uKRATTllSxFKXUSp8z
         7fRFO5Xjndvp2AeGVj3JSd/nN3Pu/97m7CSN1tis1hoh2m4wGHaJH/2b3uq/HFHrjL0k1JEAgEprHFLp
         jDXi1zIT1KcOQn3CT4y4lz/0SKGp1miX6Xe48WNzjsFcEG85B4+Wi3HpgurkGeEHEVMnwmYltXN1Chaj
@@ -220,7 +220,7 @@
   <data name="btnClient.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAA
-        qwAAAKsB1E2SqwAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAT4SURBVEhLlVVr
+        qAAAAKgBefSzxgAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAT4SURBVEhLlVVr
         TFNnGK6bzmT7tV8uy2L2Y7/2l8Vs/0yWDHAKbRmgiBfE+1QECbbg9FRbCl5gmCxDoiBKh8MFdQpGnEAY
         GnFOLi6CYqFQBGp7yunpuRSRvnu/r9854jSLPsmTfpfnfZ7v0n41/B9EUTTKsuyLqCq8jtOqGnimKEuY
         /O0R5PlmRZapmTI+AfLEJCiTPpCxrYWoqnqQyd8ePM+3kIDw4yHwbNgBnq25yDzwbMkFacijBdiZ/O2h
@@ -248,7 +248,7 @@
   <data name="pictureBox1.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAy4AAAGUCAYAAADTfXaRAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
-        vQAADr0BR/uQrQAA/7JJREFUeF6c/QeAJtlV3g/z2cYgo7DandTdMz2pc845557p6enJOeecc855dmdm
+        vAAADrwBlbxySQAA/7JJREFUeF6c/QeAJtlV3g/z2cYgo7DandTdMz2pc845557p6enJOeecc855dmdm
         c86r3dVKKwmBEjISxn/AOIAxwciAScKWkUAgbd7zPb9z67797kjw9/eNdPbeim911a2q86vnnHt/ZkJd
         tU1sqresxjqbpHJio0zlpJYGy25tsCmtzTalrVVli5dT29tkKlvbVco6221aZ4dN7+20nIEuyx/sccub
         0Wd5QwMq+70snD3DiuYMy2ZZyfzZVrpwjsqRUC6aY6VL51jF8vlWuUymsnbVYqtdKVPZsHaZ1a9bas0b
@@ -13487,43 +13487,7 @@
         Xe0quFy1q3bVrtpVu2pX7apdtat21f6bW4b9/zcjnFsMR3avAAAAAElFTkSuQmCC
 </value>
   </data>
-  <metadata name="nom.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="prenom.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="email.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="adresse.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="telephone.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="genre.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="bdCoutureDataSet.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>17, 17</value>
-  </metadata>
-  <metadata name="bdCoutureDataSetBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>170, 17</value>
-  </metadata>
-  <metadata name="personneBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>401, 17</value>
-  </metadata>
-  <metadata name="personneTableAdapter.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>582, 17</value>
-  </metadata>
-  <metadata name="clientBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>758, 17</value>
-  </metadata>
-  <metadata name="clientTableAdapter.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>17, 56</value>
-  </metadata>
-  <metadata name="clientBindingSource1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>171, 56</value>
+  <metadata name="$this.TrayHeight" type="System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>25</value>
   </metadata>
 </root>

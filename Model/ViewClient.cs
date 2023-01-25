@@ -7,17 +7,19 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Gestion_Atelier_Couture.Model
+namespace Gestion_Atelier_Couture.model
 {
     using System;
     using System.Collections.Generic;
     
-    public partial class sysdiagrams
+    public partial class ViewClient
     {
-        public string name { get; set; }
-        public int principal_id { get; set; }
-        public int diagram_id { get; set; }
-        public Nullable<int> version { get; set; }
-        public byte[] definition { get; set; }
+        public int idPers { get; set; }
+        public string NomPers { get; set; }
+        public string PrenomPers { get; set; }
+        public string AdressPers { get; set; }
+        public string TelPers { get; set; }
+        public string EmailPers { get; set; }
+        public string Genre { get; set; }
     }
 }

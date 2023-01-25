@@ -30,11 +30,11 @@
         {
             this.panel1 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
-            this.NomTb = new System.Windows.Forms.TextBox();
+            this.txtuser = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.button1 = new System.Windows.Forms.Button();
+            this.txtmdp = new System.Windows.Forms.TextBox();
+            this.btnConnexion = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.label4 = new System.Windows.Forms.Label();
             this.panel2.SuspendLayout();
@@ -59,12 +59,12 @@
             this.label1.Size = new System.Drawing.Size(0, 22);
             this.label1.TabIndex = 1;
             // 
-            // NomTb
+            // txtuser
             // 
-            this.NomTb.Location = new System.Drawing.Point(372, 123);
-            this.NomTb.Name = "NomTb";
-            this.NomTb.Size = new System.Drawing.Size(236, 29);
-            this.NomTb.TabIndex = 2;
+            this.txtuser.Location = new System.Drawing.Point(372, 123);
+            this.txtuser.Name = "txtuser";
+            this.txtuser.Size = new System.Drawing.Size(236, 29);
+            this.txtuser.TabIndex = 2;
             // 
             // label2
             // 
@@ -87,24 +87,26 @@
             this.label3.TabIndex = 5;
             this.label3.Text = "Mot dePasse";
             // 
-            // textBox1
+            // txtmdp
             // 
-            this.textBox1.Location = new System.Drawing.Point(372, 226);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(236, 29);
-            this.textBox1.TabIndex = 4;
+            this.txtmdp.Location = new System.Drawing.Point(372, 226);
+            this.txtmdp.Name = "txtmdp";
+            this.txtmdp.PasswordChar = '*';
+            this.txtmdp.Size = new System.Drawing.Size(236, 29);
+            this.txtmdp.TabIndex = 4;
             // 
-            // button1
+            // btnConnexion
             // 
-            this.button1.BackColor = System.Drawing.Color.Orange;
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Location = new System.Drawing.Point(416, 322);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(129, 32);
-            this.button1.TabIndex = 6;
-            this.button1.Text = "Se Connecter";
-            this.button1.UseVisualStyleBackColor = false;
+            this.btnConnexion.BackColor = System.Drawing.Color.Orange;
+            this.btnConnexion.FlatAppearance.BorderSize = 0;
+            this.btnConnexion.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnConnexion.Location = new System.Drawing.Point(416, 322);
+            this.btnConnexion.Name = "btnConnexion";
+            this.btnConnexion.Size = new System.Drawing.Size(129, 32);
+            this.btnConnexion.TabIndex = 6;
+            this.btnConnexion.Text = "Se Connecter";
+            this.btnConnexion.UseVisualStyleBackColor = false;
+            this.btnConnexion.Click += new System.EventHandler(this.btnConnexion_Click);
             // 
             // panel2
             // 
@@ -133,11 +135,11 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(846, 456);
             this.Controls.Add(this.panel2);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btnConnexion);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.txtmdp);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.NomTb);
+            this.Controls.Add(this.txtuser);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.panel1);
             this.Font = new System.Drawing.Font("Palatino Linotype", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -156,11 +158,11 @@
 
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox NomTb;
+        private System.Windows.Forms.TextBox txtuser;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.TextBox txtmdp;
+        private System.Windows.Forms.Button btnConnexion;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label label4;
     }

@@ -5,9 +5,10 @@
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
       <Diagram DiagramId="a4b7776273ff46b7a6040173b39b7926" Name="Diagram1">
-        <EntityTypeShape EntityType="bdgestcouturModel.Client" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
         <EntityTypeShape EntityType="bdgestcouturModel.Personne" Width="1.5" PointX="2.75" PointY="0.75" IsExpanded="true" />
         <EntityTypeShape EntityType="bdgestcouturModel.ViewClient" Width="1.5" PointX="5.75" PointY="1.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="bdgestcouturModel.Client" Width="1.5" PointX="0.75" PointY="3.75" />
+        <EntityTypeShape EntityType="bdgestcouturModel.Login" Width="1.5" PointX="3.875" PointY="3.625" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

@@ -4,19 +4,27 @@
     <Key>
       <PropertyRef Name="idPers" />
     </Key>
-    <Property Name="idPers" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="idPers" Type="int" Nullable="false" />
     <Property Name="Genre" Type="nchar" MaxLength="10" />
+  </EntityType>
+  <EntityType Name="Login">
+    <Key>
+      <PropertyRef Name="idLogin" />
+    </Key>
+    <Property Name="idLogin" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="utilisateur" Type="nchar" MaxLength="100" />
+    <Property Name="mdpasse" Type="nchar" MaxLength="100" />
   </EntityType>
   <EntityType Name="Personne">
     <Key>
       <PropertyRef Name="idPers" />
     </Key>
     <Property Name="idPers" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-    <Property Name="NomPers" Type="nchar" MaxLength="80" />
-    <Property Name="PrenomPers" Type="nchar" MaxLength="80" />
-    <Property Name="AdressPers" Type="nchar" MaxLength="150" />
+    <Property Name="NomPers" Type="nchar" MaxLength="20" />
+    <Property Name="PrenomPers" Type="nchar" MaxLength="100" />
+    <Property Name="AdressPers" Type="nchar" MaxLength="100" />
     <Property Name="TelPers" Type="nchar" MaxLength="10" />
-    <Property Name="EmailPers" Type="nchar" MaxLength="80" />
+    <Property Name="EmailPers" Type="nchar" MaxLength="50" />
   </EntityType>
   <!--Erreurs détectées durant la génération :
 avertissement 6002: La table/vue 'bdgestcoutur.dbo.ViewClient' n'a pas de clé primaire définie. La clé a été déduite et la définition a été créée en tant que table/vue en lecture seule.-->
@@ -34,6 +42,7 @@ avertissement 6002: La table/vue 'bdgestcoutur.dbo.ViewClient' n'a pas de clé p
   </EntityType>
   <EntityContainer Name="bdgestcouturModelStoreContainer">
     <EntitySet Name="Client" EntityType="Self.Client" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Login" EntityType="Self.Login" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Personne" EntityType="Self.Personne" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="ViewClient" EntityType="Self.ViewClient" store:Type="Views" store:Schema="dbo">
       <DefiningQuery>SELECT 

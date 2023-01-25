@@ -9,19 +9,27 @@
           <Key>
             <PropertyRef Name="idPers" />
           </Key>
-          <Property Name="idPers" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="idPers" Type="int" Nullable="false" />
           <Property Name="Genre" Type="nchar" MaxLength="10" />
+        </EntityType>
+        <EntityType Name="Login">
+          <Key>
+            <PropertyRef Name="idLogin" />
+          </Key>
+          <Property Name="idLogin" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="utilisateur" Type="nchar" MaxLength="100" />
+          <Property Name="mdpasse" Type="nchar" MaxLength="100" />
         </EntityType>
         <EntityType Name="Personne">
           <Key>
             <PropertyRef Name="idPers" />
           </Key>
           <Property Name="idPers" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-          <Property Name="NomPers" Type="nchar" MaxLength="80" />
-          <Property Name="PrenomPers" Type="nchar" MaxLength="80" />
-          <Property Name="AdressPers" Type="nchar" MaxLength="150" />
+          <Property Name="NomPers" Type="nchar" MaxLength="20" />
+          <Property Name="PrenomPers" Type="nchar" MaxLength="100" />
+          <Property Name="AdressPers" Type="nchar" MaxLength="100" />
           <Property Name="TelPers" Type="nchar" MaxLength="10" />
-          <Property Name="EmailPers" Type="nchar" MaxLength="80" />
+          <Property Name="EmailPers" Type="nchar" MaxLength="50" />
         </EntityType>
         <!--Erreurs détectées durant la génération :
 avertissement 6002: La table/vue 'bdgestcoutur.dbo.ViewClient' n'a pas de clé primaire définie. La clé a été déduite et la définition a été créée en tant que table/vue en lecture seule.-->
@@ -39,6 +47,7 @@ avertissement 6002: La table/vue 'bdgestcoutur.dbo.ViewClient' n'a pas de clé p
         </EntityType>
         <EntityContainer Name="bdgestcouturModelStoreContainer">
           <EntitySet Name="Client" EntityType="Self.Client" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Login" EntityType="Self.Login" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Personne" EntityType="Self.Personne" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="ViewClient" EntityType="Self.ViewClient" store:Type="Views" store:Schema="dbo">
             <DefiningQuery>SELECT 
@@ -56,28 +65,22 @@ avertissement 6002: La table/vue 'bdgestcoutur.dbo.ViewClient' n'a pas de clé p
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="bdgestcouturModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
-        <EntityType Name="Client">
-          <Key>
-            <PropertyRef Name="idPers" />
-          </Key>
-          <Property Name="idPers" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="Genre" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
-        </EntityType>
         <EntityType Name="Personne">
           <Key>
             <PropertyRef Name="idPers" />
           </Key>
           <Property Name="idPers" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="NomPers" Type="String" MaxLength="80" FixedLength="true" Unicode="true" />
-          <Property Name="PrenomPers" Type="String" MaxLength="80" FixedLength="true" Unicode="true" />
-          <Property Name="AdressPers" Type="String" MaxLength="150" FixedLength="true" Unicode="true" />
+          <Property Name="NomPers" Type="String" MaxLength="20" FixedLength="true" Unicode="true" />
+          <Property Name="PrenomPers" Type="String" MaxLength="100" FixedLength="true" Unicode="true" />
+          <Property Name="AdressPers" Type="String" MaxLength="100" FixedLength="true" Unicode="true" />
           <Property Name="TelPers" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
-          <Property Name="EmailPers" Type="String" MaxLength="80" FixedLength="true" Unicode="true" />
+          <Property Name="EmailPers" Type="String" MaxLength="50" FixedLength="true" Unicode="true" />
         </EntityType>
         <EntityContainer Name="bdgescouturEntities" annotation:LazyLoadingEnabled="true">
-          <EntitySet Name="Client" EntityType="Self.Client" />
           <EntitySet Name="Personne" EntityType="Self.Personne" />
           <EntitySet Name="ViewClient" EntityType="bdgestcouturModel.ViewClient" />
+          <EntitySet Name="Client" EntityType="bdgestcouturModel.Client" />
+          <EntitySet Name="Login" EntityType="bdgestcouturModel.Login" />
         </EntityContainer>
         <EntityType Name="ViewClient">
           <Key>
@@ -91,20 +94,27 @@ avertissement 6002: La table/vue 'bdgestcoutur.dbo.ViewClient' n'a pas de clé p
           <Property Name="EmailPers" Type="String" MaxLength="80" FixedLength="true" Unicode="true" />
           <Property Name="Genre" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
         </EntityType>
+        <EntityType Name="Client">
+          <Key>
+            <PropertyRef Name="idPers" />
+          </Key>
+          <Property Name="idPers" Type="Int32" Nullable="false" />
+          <Property Name="Genre" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+        </EntityType>
+        <EntityType Name="Login">
+          <Key>
+            <PropertyRef Name="idLogin" />
+          </Key>
+          <Property Name="idLogin" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="utilisateur" Type="String" MaxLength="100" FixedLength="true" Unicode="true" />
+          <Property Name="mdpasse" Type="String" MaxLength="100" FixedLength="true" Unicode="true" />
+        </EntityType>
       </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
     <edmx:Mappings>
       <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
         <EntityContainerMapping StorageEntityContainer="bdgestcouturModelStoreContainer" CdmEntityContainer="bdgescouturEntities">
-          <EntitySetMapping Name="Client">
-            <EntityTypeMapping TypeName="bdgestcouturModel.Client">
-              <MappingFragment StoreEntitySet="Client">
-                <ScalarProperty Name="idPers" ColumnName="idPers" />
-                <ScalarProperty Name="Genre" ColumnName="Genre" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
           <EntitySetMapping Name="Personne">
             <EntityTypeMapping TypeName="bdgestcouturModel.Personne">
               <MappingFragment StoreEntitySet="Personne">
@@ -127,6 +137,23 @@ avertissement 6002: La table/vue 'bdgestcoutur.dbo.ViewClient' n'a pas de clé p
                 <ScalarProperty Name="PrenomPers" ColumnName="PrenomPers" />
                 <ScalarProperty Name="NomPers" ColumnName="NomPers" />
                 <ScalarProperty Name="idPers" ColumnName="idPers" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Client">
+            <EntityTypeMapping TypeName="bdgestcouturModel.Client">
+              <MappingFragment StoreEntitySet="Client">
+                <ScalarProperty Name="Genre" ColumnName="Genre" />
+                <ScalarProperty Name="idPers" ColumnName="idPers" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Login">
+            <EntityTypeMapping TypeName="bdgestcouturModel.Login">
+              <MappingFragment StoreEntitySet="Login">
+                <ScalarProperty Name="mdpasse" ColumnName="mdpasse" />
+                <ScalarProperty Name="utilisateur" ColumnName="utilisateur" />
+                <ScalarProperty Name="idLogin" ColumnName="idLogin" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

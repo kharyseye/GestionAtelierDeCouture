@@ -25,8 +25,9 @@ namespace Gestion_Atelier_Couture.model
             throw new UnintentionalCodeFirstException();
         }
     
-        public virtual DbSet<Client> Client { get; set; }
         public virtual DbSet<Personne> Personne { get; set; }
         public virtual DbSet<ViewClient> ViewClient { get; set; }
+        public virtual DbSet<Client> Client { get; set; }
+        public virtual DbSet<Login> Login { get; set; }
     }
 }

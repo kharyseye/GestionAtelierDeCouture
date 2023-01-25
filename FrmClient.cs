@@ -16,11 +16,12 @@ namespace Gestion_Atelier_Couture
     public partial class FrmClient : Form
     {
         bdgescouturEntities db;
+        //private Button currentButton;
         public FrmClient()
         {
             InitializeComponent();
         }
-
+        
         private void FrmClient_Load(object sender, EventArgs e)
         {
             db = new bdgescouturEntities();
@@ -37,6 +38,19 @@ namespace Gestion_Atelier_Couture
             dgvClient.DataSource = db.ViewClient.ToList();
             txtNom.Focus();
         }
+
+       /* private void activebuttun(object btnsender) 
+        {
+            if(btnsender != null)
+            {
+                if(currentButton != (Button)btnsender)
+                {
+                    currentButton = (Button)btnsender;
+                }
+            }
+            
+        }*/
+
         private void label2_Click(object sender, EventArgs e)
         {
 
@@ -90,8 +104,7 @@ namespace Gestion_Atelier_Couture
             p.EmailPers = txtEmail.Text;
             db.Personne.Add(p);
             db.SaveChanges();
-
-            Client c = new Client();
+            Client c = new Client();            
             c.idPers = p.idPers;
             c.Genre = cbbGenre.Text;
             db.Client.Add(c);
@@ -130,19 +143,40 @@ namespace Gestion_Atelier_Couture
             p.EmailPers = txtEmail.Text;
             p.TelPers = txtTelephone.Text;
             db.SaveChanges();
-
             Client c = db.Client.Find(id);
-            c.idPers = p.idPers;
             c.Genre = cbbGenre.Text;
-            MessageBox.Show("modification enregistré");
             db.SaveChanges();
+            MessageBox.Show("modification enregistrée");
             effacer();
-
         }
 
         private void dgvClient_CellContentClick_1(object sender, DataGridViewCellEventArgs e)
         {
 
+        }
+
+        private void btnClient_Click(object sender, EventArgs e)
+        {
+            FrmClient c = new FrmClient();
+            c.Show();
+        }
+
+        private void btnMesure_Click(object sender, EventArgs e)
+        {
+            FrmMesure m = new FrmMesure();
+            m.Show();
+            this.Hide();
+        }
+
+        private void btnDeconnexion_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Connexion con = new Connexion();
+            con.Show();
         }
     }
 }

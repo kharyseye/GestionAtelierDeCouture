@@ -16,7 +16,7 @@ namespace Gestion_Atelier_Couture
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new FrmClient());
+            Application.Run(new Connexion());
         }
     }
 }

@@ -30,6 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmClient));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.button1 = new System.Windows.Forms.Button();
             this.btnDeconnexion = new System.Windows.Forms.Button();
             this.btnParametre = new System.Windows.Forms.Button();
             this.btnMesure = new System.Windows.Forms.Button();
@@ -67,6 +68,7 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.Orange;
+            this.panel1.Controls.Add(this.button1);
             this.panel1.Controls.Add(this.btnDeconnexion);
             this.panel1.Controls.Add(this.btnParametre);
             this.panel1.Controls.Add(this.btnMesure);
@@ -78,8 +80,25 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(200, 494);
+            this.panel1.Size = new System.Drawing.Size(200, 518);
             this.panel1.TabIndex = 1;
+            // 
+            // button1
+            // 
+            this.button1.FlatAppearance.BorderSize = 0;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("Perpetua", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
+            this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button1.Location = new System.Drawing.Point(0, 388);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(194, 42);
+            this.button1.TabIndex = 45;
+            this.button1.Text = "Authentification";
+            this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // btnDeconnexion
             // 
@@ -96,6 +115,7 @@
             this.btnDeconnexion.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnDeconnexion.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnDeconnexion.UseVisualStyleBackColor = true;
+            this.btnDeconnexion.Click += new System.EventHandler(this.btnDeconnexion_Click);
             // 
             // btnParametre
             // 
@@ -128,6 +148,7 @@
             this.btnMesure.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnMesure.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnMesure.UseVisualStyleBackColor = true;
+            this.btnMesure.Click += new System.EventHandler(this.btnMesure_Click);
             // 
             // btnPersonnel
             // 
@@ -194,6 +215,7 @@
             this.btnClient.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnClient.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnClient.UseVisualStyleBackColor = true;
+            this.btnClient.Click += new System.EventHandler(this.btnClient_Click);
             // 
             // pictureBox1
             // 
@@ -212,7 +234,7 @@
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel2.Location = new System.Drawing.Point(200, 0);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(728, 58);
+            this.panel2.Size = new System.Drawing.Size(750, 58);
             this.panel2.TabIndex = 2;
             // 
             // label1
@@ -399,7 +421,7 @@
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Palatino Linotype", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(70)))), ((int)(((byte)(144)))));
-            this.label7.Location = new System.Drawing.Point(464, 244);
+            this.label7.Location = new System.Drawing.Point(466, 219);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(132, 22);
             this.label7.TabIndex = 33;
@@ -408,9 +430,9 @@
             // dgvClient
             // 
             this.dgvClient.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvClient.Location = new System.Drawing.Point(222, 278);
+            this.dgvClient.Location = new System.Drawing.Point(222, 244);
             this.dgvClient.Name = "dgvClient";
-            this.dgvClient.Size = new System.Drawing.Size(693, 216);
+            this.dgvClient.Size = new System.Drawing.Size(705, 250);
             this.dgvClient.TabIndex = 34;
             this.dgvClient.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvClient_CellContentClick_1);
             // 
@@ -418,7 +440,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(928, 494);
+            this.ClientSize = new System.Drawing.Size(950, 518);
             this.Controls.Add(this.dgvClient);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.button5);
@@ -490,5 +512,6 @@
         private System.Windows.Forms.BindingSource clientBindingSource;
         private System.Windows.Forms.BindingSource clientBindingSource1;
         private System.Windows.Forms.DataGridView dgvClient;
+        private System.Windows.Forms.Button button1;
     }
 }

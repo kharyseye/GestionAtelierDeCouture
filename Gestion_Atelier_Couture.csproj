@@ -91,6 +91,9 @@
     <Compile Include="model\Client.cs">
       <DependentUpon>bdgestcoutur.tt</DependentUpon>
     </Compile>
+    <Compile Include="model\Login.cs">
+      <DependentUpon>bdgestcoutur.tt</DependentUpon>
+    </Compile>
     <Compile Include="model\Personne.cs">
       <DependentUpon>bdgestcoutur.tt</DependentUpon>
     </Compile>

@@ -59,6 +59,7 @@
             this.button5 = new System.Windows.Forms.Button();
             this.label7 = new System.Windows.Forms.Label();
             this.dgvClient = new System.Windows.Forms.DataGridView();
+            this.btnRechercher = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel2.SuspendLayout();
@@ -436,11 +437,26 @@
             this.dgvClient.TabIndex = 34;
             this.dgvClient.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvClient_CellContentClick_1);
             // 
+            // btnRechercher
+            // 
+            this.btnRechercher.BackColor = System.Drawing.Color.Orange;
+            this.btnRechercher.FlatAppearance.BorderSize = 0;
+            this.btnRechercher.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnRechercher.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(70)))), ((int)(((byte)(144)))));
+            this.btnRechercher.Location = new System.Drawing.Point(716, 204);
+            this.btnRechercher.Name = "btnRechercher";
+            this.btnRechercher.Size = new System.Drawing.Size(129, 32);
+            this.btnRechercher.TabIndex = 35;
+            this.btnRechercher.Text = "Rechercher";
+            this.btnRechercher.UseVisualStyleBackColor = false;
+            this.btnRechercher.Click += new System.EventHandler(this.btnRechercher_Click);
+            // 
             // FrmClient
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(950, 518);
+            this.Controls.Add(this.btnRechercher);
             this.Controls.Add(this.dgvClient);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.button5);
@@ -513,5 +529,6 @@
         private System.Windows.Forms.BindingSource clientBindingSource1;
         private System.Windows.Forms.DataGridView dgvClient;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnRechercher;
     }
 }

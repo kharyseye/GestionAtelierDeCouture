@@ -178,5 +178,24 @@ namespace Gestion_Atelier_Couture
             Connexion con = new Connexion();
             con.Show();
         }
+
+        private void btnRechercher_Click(object sender, EventArgs e)
+        {
+            var liste = db.ViewClient.ToList();
+            if (!string.IsNullOrEmpty(txtNom.Text))
+            {
+                liste = liste.Where(x => x.NomPers.ToUpper().Contains(txtNom.Text.ToUpper())).ToList();
+            }
+            if (!string.IsNullOrEmpty(txtPrenom.Text))
+            {
+                liste = liste.Where(x => x.PrenomPers.ToUpper().Contains(txtPrenom.Text.ToUpper())).ToList();
+            }
+            if (!string.IsNullOrEmpty(cbbGenre.Text))
+            {
+                liste = liste.Where(x => x.Genre==cbbGenre.Text).ToList();
+            }
+            dgvClient.DataSource = liste.ToList();
+
+        }
     }
 }

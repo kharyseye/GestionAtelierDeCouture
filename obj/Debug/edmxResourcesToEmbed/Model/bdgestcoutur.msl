@@ -43,5 +43,40 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
+    <EntitySetMapping Name="ComplementMesurefemme">
+      <EntityTypeMapping TypeName="bdgestcouturModel.ComplementMesurefemme">
+        <MappingFragment StoreEntitySet="ComplementMesurefemme">
+          <ScalarProperty Name="LDos" ColumnName="LDos" />
+          <ScalarProperty Name="creteslliaque" ColumnName="creteslliaque" />
+          <ScalarProperty Name="dessousPoit" ColumnName="dessousPoit" />
+          <ScalarProperty Name="idClient" ColumnName="idClient" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Mesure">
+      <EntityTypeMapping TypeName="bdgestcouturModel.Mesure">
+        <MappingFragment StoreEntitySet="Mesure">
+          <ScalarProperty Name="hTotale" ColumnName="hTotale" />
+          <ScalarProperty Name="coutureExt" ColumnName="coutureExt" />
+          <ScalarProperty Name="entreJambe" ColumnName="entreJambe" />
+          <ScalarProperty Name="poignetCoude" ColumnName="poignetCoude" />
+          <ScalarProperty Name="avantBras" ColumnName="avantBras" />
+          <ScalarProperty Name="coude" ColumnName="coude" />
+          <ScalarProperty Name="biceps" ColumnName="biceps" />
+          <ScalarProperty Name="cheville" ColumnName="cheville" />
+          <ScalarProperty Name="mollet" ColumnName="mollet" />
+          <ScalarProperty Name="genou" ColumnName="genou" />
+          <ScalarProperty Name="cuisse" ColumnName="cuisse" />
+          <ScalarProperty Name="LCorps" ColumnName="LCorps" />
+          <ScalarProperty Name="hanches" ColumnName="hanches" />
+          <ScalarProperty Name="poitrine" ColumnName="poitrine" />
+          <ScalarProperty Name="LBras" ColumnName="LBras" />
+          <ScalarProperty Name="epaule" ColumnName="epaule" />
+          <ScalarProperty Name="cou" ColumnName="cou" />
+          <ScalarProperty Name="tete" ColumnName="tete" />
+          <ScalarProperty Name="idClient" ColumnName="idClient" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
   </EntityContainerMapping>
 </Mapping>

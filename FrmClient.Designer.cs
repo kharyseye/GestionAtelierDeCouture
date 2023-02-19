@@ -60,6 +60,7 @@
             this.label7 = new System.Windows.Forms.Label();
             this.dgvClient = new System.Windows.Forms.DataGridView();
             this.btnRechercher = new System.Windows.Forms.Button();
+            this.btnMesurer = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel2.SuspendLayout();
@@ -301,7 +302,7 @@
             this.txtAdresse.Location = new System.Drawing.Point(222, 157);
             this.txtAdresse.Multiline = true;
             this.txtAdresse.Name = "txtAdresse";
-            this.txtAdresse.Size = new System.Drawing.Size(119, 80);
+            this.txtAdresse.Size = new System.Drawing.Size(119, 45);
             this.txtAdresse.TabIndex = 18;
             // 
             // label4
@@ -443,7 +444,7 @@
             this.btnRechercher.FlatAppearance.BorderSize = 0;
             this.btnRechercher.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnRechercher.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(70)))), ((int)(((byte)(144)))));
-            this.btnRechercher.Location = new System.Drawing.Point(716, 204);
+            this.btnRechercher.Location = new System.Drawing.Point(639, 205);
             this.btnRechercher.Name = "btnRechercher";
             this.btnRechercher.Size = new System.Drawing.Size(129, 32);
             this.btnRechercher.TabIndex = 35;
@@ -451,11 +452,26 @@
             this.btnRechercher.UseVisualStyleBackColor = false;
             this.btnRechercher.Click += new System.EventHandler(this.btnRechercher_Click);
             // 
+            // btnMesurer
+            // 
+            this.btnMesurer.BackColor = System.Drawing.Color.Orange;
+            this.btnMesurer.FlatAppearance.BorderSize = 0;
+            this.btnMesurer.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnMesurer.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(70)))), ((int)(((byte)(144)))));
+            this.btnMesurer.Location = new System.Drawing.Point(786, 206);
+            this.btnMesurer.Name = "btnMesurer";
+            this.btnMesurer.Size = new System.Drawing.Size(129, 32);
+            this.btnMesurer.TabIndex = 36;
+            this.btnMesurer.Text = "Mesure";
+            this.btnMesurer.UseVisualStyleBackColor = false;
+            this.btnMesurer.Click += new System.EventHandler(this.btnMesurer_Click);
+            // 
             // FrmClient
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(950, 518);
+            this.Controls.Add(this.btnMesurer);
             this.Controls.Add(this.btnRechercher);
             this.Controls.Add(this.dgvClient);
             this.Controls.Add(this.label7);
@@ -530,5 +546,6 @@
         private System.Windows.Forms.DataGridView dgvClient;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button btnRechercher;
+        private System.Windows.Forms.Button btnMesurer;
     }
 }

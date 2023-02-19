@@ -16,17 +16,19 @@
     <EntitySet Name="ViewClient" EntityType="bdgestcouturModel.ViewClient" />
     <EntitySet Name="Client" EntityType="bdgestcouturModel.Client" />
     <EntitySet Name="Login" EntityType="bdgestcouturModel.Login" />
+    <EntitySet Name="ComplementMesurefemme" EntityType="bdgestcouturModel.ComplementMesurefemme" />
+    <EntitySet Name="Mesure" EntityType="bdgestcouturModel.Mesure" />
   </EntityContainer>
   <EntityType Name="ViewClient">
     <Key>
       <PropertyRef Name="idPers" />
     </Key>
     <Property Name="idPers" Type="Int32" Nullable="false" />
-    <Property Name="NomPers" Type="String" MaxLength="80" FixedLength="true" Unicode="true" />
-    <Property Name="PrenomPers" Type="String" MaxLength="80" FixedLength="true" Unicode="true" />
-    <Property Name="AdressPers" Type="String" MaxLength="150" FixedLength="true" Unicode="true" />
+    <Property Name="NomPers" Type="String" MaxLength="20" FixedLength="true" Unicode="true" />
+    <Property Name="PrenomPers" Type="String" MaxLength="100" FixedLength="true" Unicode="true" />
+    <Property Name="AdressPers" Type="String" MaxLength="100" FixedLength="true" Unicode="true" />
     <Property Name="TelPers" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
-    <Property Name="EmailPers" Type="String" MaxLength="80" FixedLength="true" Unicode="true" />
+    <Property Name="EmailPers" Type="String" MaxLength="50" FixedLength="true" Unicode="true" />
     <Property Name="Genre" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
   </EntityType>
   <EntityType Name="Client">
@@ -43,5 +45,38 @@
     <Property Name="idLogin" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
     <Property Name="utilisateur" Type="String" MaxLength="100" FixedLength="true" Unicode="true" />
     <Property Name="mdpasse" Type="String" MaxLength="100" FixedLength="true" Unicode="true" />
+  </EntityType>
+  <EntityType Name="ComplementMesurefemme">
+    <Key>
+      <PropertyRef Name="idClient" />
+    </Key>
+    <Property Name="idClient" Type="Int32" Nullable="false" />
+    <Property Name="dessousPoit" Type="Double" />
+    <Property Name="creteslliaque" Type="Double" />
+    <Property Name="LDos" Type="Double" />
+  </EntityType>
+  <EntityType Name="Mesure">
+    <Key>
+      <PropertyRef Name="idClient" />
+    </Key>
+    <Property Name="idClient" Type="Int32" Nullable="false" />
+    <Property Name="tete" Type="Double" />
+    <Property Name="cou" Type="Double" />
+    <Property Name="epaule" Type="Double" />
+    <Property Name="LBras" Type="Double" />
+    <Property Name="poitrine" Type="Double" />
+    <Property Name="hanches" Type="Double" />
+    <Property Name="LCorps" Type="Double" />
+    <Property Name="cuisse" Type="Double" />
+    <Property Name="genou" Type="Double" />
+    <Property Name="mollet" Type="Double" />
+    <Property Name="cheville" Type="Double" />
+    <Property Name="biceps" Type="Double" />
+    <Property Name="coude" Type="Double" />
+    <Property Name="avantBras" Type="Double" />
+    <Property Name="poignetCoude" Type="Double" />
+    <Property Name="entreJambe" Type="Double" />
+    <Property Name="coutureExt" Type="Double" />
+    <Property Name="hTotale" Type="Double" />
   </EntityType>
 </Schema>

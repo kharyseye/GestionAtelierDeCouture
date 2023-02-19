@@ -29,5 +29,7 @@ namespace Gestion_Atelier_Couture.model
         public virtual DbSet<ViewClient> ViewClient { get; set; }
         public virtual DbSet<Client> Client { get; set; }
         public virtual DbSet<Login> Login { get; set; }
+        public virtual DbSet<ComplementMesurefemme> ComplementMesurefemme { get; set; }
+        public virtual DbSet<Mesure> Mesure { get; set; }
     }
 }

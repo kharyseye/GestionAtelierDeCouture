@@ -197,5 +197,13 @@ namespace Gestion_Atelier_Couture
             dgvClient.DataSource = liste.ToList();
 
         }
+
+        private void btnMesurer_Click(object sender, EventArgs e)
+        {
+            FrmMesure f = new FrmMesure();
+            f.idClient = int.Parse(dgvClient.CurrentRow.Cells[0].Value.ToString());
+            f.sexe = dgvClient.CurrentRow.Cells[6].Value.ToString();
+            f.Show();
+        }
     }
 }

@@ -36,6 +36,14 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.label13 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.btnDeconnexion = new System.Windows.Forms.Button();
+            this.btnParametre = new System.Windows.Forms.Button();
+            this.btnMesure = new System.Windows.Forms.Button();
+            this.btnPersonnel = new System.Windows.Forms.Button();
+            this.btnCommande = new System.Windows.Forms.Button();
+            this.btnModele = new System.Windows.Forms.Button();
+            this.btnClient = new System.Windows.Forms.Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.textBox3 = new System.Windows.Forms.TextBox();
@@ -54,14 +62,7 @@
             this.textBox15 = new System.Windows.Forms.TextBox();
             this.textBox16 = new System.Windows.Forms.TextBox();
             this.textBox17 = new System.Windows.Forms.TextBox();
-            this.btnDeconnexion = new System.Windows.Forms.Button();
-            this.btnParametre = new System.Windows.Forms.Button();
-            this.btnMesure = new System.Windows.Forms.Button();
-            this.btnPersonnel = new System.Windows.Forms.Button();
-            this.btnCommande = new System.Windows.Forms.Button();
-            this.btnModele = new System.Windows.Forms.Button();
-            this.btnClient = new System.Windows.Forms.Button();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.pnFemme = new System.Windows.Forms.Panel();
             this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -73,7 +74,7 @@
             this.button1.FlatAppearance.BorderSize = 0;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(70)))), ((int)(((byte)(144)))));
-            this.button1.Location = new System.Drawing.Point(470, 317);
+            this.button1.Location = new System.Drawing.Point(453, 193);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(129, 32);
             this.button1.TabIndex = 48;
@@ -147,6 +148,128 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(200, 450);
             this.panel1.TabIndex = 34;
+            // 
+            // btnDeconnexion
+            // 
+            this.btnDeconnexion.FlatAppearance.BorderSize = 0;
+            this.btnDeconnexion.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnDeconnexion.Font = new System.Drawing.Font("Perpetua", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDeconnexion.Image = ((System.Drawing.Image)(resources.GetObject("btnDeconnexion.Image")));
+            this.btnDeconnexion.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnDeconnexion.Location = new System.Drawing.Point(32, 415);
+            this.btnDeconnexion.Name = "btnDeconnexion";
+            this.btnDeconnexion.Size = new System.Drawing.Size(137, 42);
+            this.btnDeconnexion.TabIndex = 52;
+            this.btnDeconnexion.Text = "Deconnexion";
+            this.btnDeconnexion.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnDeconnexion.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnDeconnexion.UseVisualStyleBackColor = true;
+            // 
+            // btnParametre
+            // 
+            this.btnParametre.FlatAppearance.BorderSize = 0;
+            this.btnParametre.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnParametre.Font = new System.Drawing.Font("Perpetua", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnParametre.Image = ((System.Drawing.Image)(resources.GetObject("btnParametre.Image")));
+            this.btnParametre.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnParametre.Location = new System.Drawing.Point(0, 315);
+            this.btnParametre.Name = "btnParametre";
+            this.btnParametre.Size = new System.Drawing.Size(194, 42);
+            this.btnParametre.TabIndex = 51;
+            this.btnParametre.Text = "Parametre";
+            this.btnParametre.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnParametre.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnParametre.UseVisualStyleBackColor = true;
+            // 
+            // btnMesure
+            // 
+            this.btnMesure.FlatAppearance.BorderSize = 0;
+            this.btnMesure.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnMesure.Font = new System.Drawing.Font("Perpetua", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnMesure.Image = ((System.Drawing.Image)(resources.GetObject("btnMesure.Image")));
+            this.btnMesure.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnMesure.Location = new System.Drawing.Point(6, 126);
+            this.btnMesure.Name = "btnMesure";
+            this.btnMesure.Size = new System.Drawing.Size(194, 42);
+            this.btnMesure.TabIndex = 50;
+            this.btnMesure.Text = "Mesure";
+            this.btnMesure.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnMesure.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnMesure.UseVisualStyleBackColor = true;
+            // 
+            // btnPersonnel
+            // 
+            this.btnPersonnel.FlatAppearance.BorderSize = 0;
+            this.btnPersonnel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnPersonnel.Font = new System.Drawing.Font("Perpetua", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnPersonnel.Image = ((System.Drawing.Image)(resources.GetObject("btnPersonnel.Image")));
+            this.btnPersonnel.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnPersonnel.Location = new System.Drawing.Point(3, 267);
+            this.btnPersonnel.Name = "btnPersonnel";
+            this.btnPersonnel.Size = new System.Drawing.Size(194, 42);
+            this.btnPersonnel.TabIndex = 49;
+            this.btnPersonnel.Text = "Personnel";
+            this.btnPersonnel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnPersonnel.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnPersonnel.UseVisualStyleBackColor = true;
+            // 
+            // btnCommande
+            // 
+            this.btnCommande.FlatAppearance.BorderSize = 0;
+            this.btnCommande.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCommande.Font = new System.Drawing.Font("Perpetua", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCommande.Image = ((System.Drawing.Image)(resources.GetObject("btnCommande.Image")));
+            this.btnCommande.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnCommande.Location = new System.Drawing.Point(0, 219);
+            this.btnCommande.Name = "btnCommande";
+            this.btnCommande.Size = new System.Drawing.Size(194, 42);
+            this.btnCommande.TabIndex = 48;
+            this.btnCommande.Text = "Commande";
+            this.btnCommande.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnCommande.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnCommande.UseVisualStyleBackColor = true;
+            // 
+            // btnModele
+            // 
+            this.btnModele.FlatAppearance.BorderSize = 0;
+            this.btnModele.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnModele.Font = new System.Drawing.Font("Perpetua", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnModele.Image = ((System.Drawing.Image)(resources.GetObject("btnModele.Image")));
+            this.btnModele.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnModele.Location = new System.Drawing.Point(3, 174);
+            this.btnModele.Name = "btnModele";
+            this.btnModele.Size = new System.Drawing.Size(194, 42);
+            this.btnModele.TabIndex = 47;
+            this.btnModele.Text = "Modele";
+            this.btnModele.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnModele.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnModele.UseVisualStyleBackColor = true;
+            // 
+            // btnClient
+            // 
+            this.btnClient.FlatAppearance.BorderSize = 0;
+            this.btnClient.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnClient.Font = new System.Drawing.Font("Perpetua", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnClient.Image = ((System.Drawing.Image)(resources.GetObject("btnClient.Image")));
+            this.btnClient.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnClient.Location = new System.Drawing.Point(3, 78);
+            this.btnClient.Name = "btnClient";
+            this.btnClient.Size = new System.Drawing.Size(194, 42);
+            this.btnClient.TabIndex = 45;
+            this.btnClient.Text = "Client";
+            this.btnClient.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnClient.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnClient.UseVisualStyleBackColor = true;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(32, -6);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(100, 64);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 46;
+            this.pictureBox1.TabStop = false;
             // 
             // textBox1
             // 
@@ -277,133 +400,20 @@
             this.textBox17.Size = new System.Drawing.Size(47, 20);
             this.textBox17.TabIndex = 74;
             // 
-            // btnDeconnexion
+            // pnFemme
             // 
-            this.btnDeconnexion.FlatAppearance.BorderSize = 0;
-            this.btnDeconnexion.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnDeconnexion.Font = new System.Drawing.Font("Perpetua", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDeconnexion.Image = ((System.Drawing.Image)(resources.GetObject("btnDeconnexion.Image")));
-            this.btnDeconnexion.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnDeconnexion.Location = new System.Drawing.Point(32, 415);
-            this.btnDeconnexion.Name = "btnDeconnexion";
-            this.btnDeconnexion.Size = new System.Drawing.Size(137, 42);
-            this.btnDeconnexion.TabIndex = 52;
-            this.btnDeconnexion.Text = "Deconnexion";
-            this.btnDeconnexion.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnDeconnexion.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnDeconnexion.UseVisualStyleBackColor = true;
-            // 
-            // btnParametre
-            // 
-            this.btnParametre.FlatAppearance.BorderSize = 0;
-            this.btnParametre.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnParametre.Font = new System.Drawing.Font("Perpetua", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnParametre.Image = ((System.Drawing.Image)(resources.GetObject("btnParametre.Image")));
-            this.btnParametre.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnParametre.Location = new System.Drawing.Point(0, 315);
-            this.btnParametre.Name = "btnParametre";
-            this.btnParametre.Size = new System.Drawing.Size(194, 42);
-            this.btnParametre.TabIndex = 51;
-            this.btnParametre.Text = "Parametre";
-            this.btnParametre.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnParametre.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnParametre.UseVisualStyleBackColor = true;
-            // 
-            // btnMesure
-            // 
-            this.btnMesure.FlatAppearance.BorderSize = 0;
-            this.btnMesure.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnMesure.Font = new System.Drawing.Font("Perpetua", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnMesure.Image = ((System.Drawing.Image)(resources.GetObject("btnMesure.Image")));
-            this.btnMesure.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnMesure.Location = new System.Drawing.Point(6, 126);
-            this.btnMesure.Name = "btnMesure";
-            this.btnMesure.Size = new System.Drawing.Size(194, 42);
-            this.btnMesure.TabIndex = 50;
-            this.btnMesure.Text = "Mesure";
-            this.btnMesure.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnMesure.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnMesure.UseVisualStyleBackColor = true;
-            // 
-            // btnPersonnel
-            // 
-            this.btnPersonnel.FlatAppearance.BorderSize = 0;
-            this.btnPersonnel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnPersonnel.Font = new System.Drawing.Font("Perpetua", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnPersonnel.Image = ((System.Drawing.Image)(resources.GetObject("btnPersonnel.Image")));
-            this.btnPersonnel.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnPersonnel.Location = new System.Drawing.Point(3, 267);
-            this.btnPersonnel.Name = "btnPersonnel";
-            this.btnPersonnel.Size = new System.Drawing.Size(194, 42);
-            this.btnPersonnel.TabIndex = 49;
-            this.btnPersonnel.Text = "Personnel";
-            this.btnPersonnel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnPersonnel.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnPersonnel.UseVisualStyleBackColor = true;
-            // 
-            // btnCommande
-            // 
-            this.btnCommande.FlatAppearance.BorderSize = 0;
-            this.btnCommande.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCommande.Font = new System.Drawing.Font("Perpetua", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCommande.Image = ((System.Drawing.Image)(resources.GetObject("btnCommande.Image")));
-            this.btnCommande.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnCommande.Location = new System.Drawing.Point(0, 219);
-            this.btnCommande.Name = "btnCommande";
-            this.btnCommande.Size = new System.Drawing.Size(194, 42);
-            this.btnCommande.TabIndex = 48;
-            this.btnCommande.Text = "Commande";
-            this.btnCommande.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnCommande.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnCommande.UseVisualStyleBackColor = true;
-            // 
-            // btnModele
-            // 
-            this.btnModele.FlatAppearance.BorderSize = 0;
-            this.btnModele.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnModele.Font = new System.Drawing.Font("Perpetua", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnModele.Image = ((System.Drawing.Image)(resources.GetObject("btnModele.Image")));
-            this.btnModele.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnModele.Location = new System.Drawing.Point(3, 174);
-            this.btnModele.Name = "btnModele";
-            this.btnModele.Size = new System.Drawing.Size(194, 42);
-            this.btnModele.TabIndex = 47;
-            this.btnModele.Text = "Modele";
-            this.btnModele.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnModele.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnModele.UseVisualStyleBackColor = true;
-            // 
-            // btnClient
-            // 
-            this.btnClient.FlatAppearance.BorderSize = 0;
-            this.btnClient.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnClient.Font = new System.Drawing.Font("Perpetua", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnClient.Image = ((System.Drawing.Image)(resources.GetObject("btnClient.Image")));
-            this.btnClient.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnClient.Location = new System.Drawing.Point(3, 78);
-            this.btnClient.Name = "btnClient";
-            this.btnClient.Size = new System.Drawing.Size(194, 42);
-            this.btnClient.TabIndex = 45;
-            this.btnClient.Text = "Client";
-            this.btnClient.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnClient.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnClient.UseVisualStyleBackColor = true;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(32, -6);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(100, 64);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 46;
-            this.pictureBox1.TabStop = false;
+            this.pnFemme.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(245)))), ((int)(((byte)(180)))));
+            this.pnFemme.Location = new System.Drawing.Point(214, 297);
+            this.pnFemme.Name = "pnFemme";
+            this.pnFemme.Size = new System.Drawing.Size(669, 128);
+            this.pnFemme.TabIndex = 75;
             // 
             // FrmMesure
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(895, 450);
+            this.Controls.Add(this.pnFemme);
             this.Controls.Add(this.textBox17);
             this.Controls.Add(this.textBox16);
             this.Controls.Add(this.textBox15);
@@ -429,6 +439,7 @@
             this.Controls.Add(this.panel1);
             this.Name = "FrmMesure";
             this.Text = "FrmMesure";
+            this.Load += new System.EventHandler(this.FrmMesure_Load);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             this.panel1.ResumeLayout(false);
@@ -473,5 +484,6 @@
         private System.Windows.Forms.Button btnModele;
         private System.Windows.Forms.Button btnClient;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Panel pnFemme;
     }
 }

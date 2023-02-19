@@ -7,6 +7,15 @@
     <Property Name="idPers" Type="int" Nullable="false" />
     <Property Name="Genre" Type="nchar" MaxLength="10" />
   </EntityType>
+  <EntityType Name="ComplementMesurefemme">
+    <Key>
+      <PropertyRef Name="idClient" />
+    </Key>
+    <Property Name="idClient" Type="int" Nullable="false" />
+    <Property Name="dessousPoit" Type="float" />
+    <Property Name="creteslliaque" Type="float" />
+    <Property Name="LDos" Type="float" />
+  </EntityType>
   <EntityType Name="Login">
     <Key>
       <PropertyRef Name="idLogin" />
@@ -14,6 +23,30 @@
     <Property Name="idLogin" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="utilisateur" Type="nchar" MaxLength="100" />
     <Property Name="mdpasse" Type="nchar" MaxLength="100" />
+  </EntityType>
+  <EntityType Name="Mesure">
+    <Key>
+      <PropertyRef Name="idClient" />
+    </Key>
+    <Property Name="idClient" Type="int" Nullable="false" />
+    <Property Name="tete" Type="float" />
+    <Property Name="cou" Type="float" />
+    <Property Name="epaule" Type="float" />
+    <Property Name="LBras" Type="float" />
+    <Property Name="poitrine" Type="float" />
+    <Property Name="hanches" Type="float" />
+    <Property Name="LCorps" Type="float" />
+    <Property Name="cuisse" Type="float" />
+    <Property Name="genou" Type="float" />
+    <Property Name="mollet" Type="float" />
+    <Property Name="cheville" Type="float" />
+    <Property Name="biceps" Type="float" />
+    <Property Name="coude" Type="float" />
+    <Property Name="avantBras" Type="float" />
+    <Property Name="poignetCoude" Type="float" />
+    <Property Name="entreJambe" Type="float" />
+    <Property Name="coutureExt" Type="float" />
+    <Property Name="hTotale" Type="float" />
   </EntityType>
   <EntityType Name="Personne">
     <Key>
@@ -33,16 +66,18 @@ avertissement 6002: La table/vue 'bdgestcoutur.dbo.ViewClient' n'a pas de clé p
       <PropertyRef Name="idPers" />
     </Key>
     <Property Name="idPers" Type="int" Nullable="false" />
-    <Property Name="NomPers" Type="nchar" MaxLength="80" />
-    <Property Name="PrenomPers" Type="nchar" MaxLength="80" />
-    <Property Name="AdressPers" Type="nchar" MaxLength="150" />
+    <Property Name="NomPers" Type="nchar" MaxLength="20" />
+    <Property Name="PrenomPers" Type="nchar" MaxLength="100" />
+    <Property Name="AdressPers" Type="nchar" MaxLength="100" />
     <Property Name="TelPers" Type="nchar" MaxLength="10" />
-    <Property Name="EmailPers" Type="nchar" MaxLength="80" />
+    <Property Name="EmailPers" Type="nchar" MaxLength="50" />
     <Property Name="Genre" Type="nchar" MaxLength="10" />
   </EntityType>
   <EntityContainer Name="bdgestcouturModelStoreContainer">
     <EntitySet Name="Client" EntityType="Self.Client" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ComplementMesurefemme" EntityType="Self.ComplementMesurefemme" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Login" EntityType="Self.Login" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Mesure" EntityType="Self.Mesure" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Personne" EntityType="Self.Personne" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="ViewClient" EntityType="Self.ViewClient" store:Type="Views" store:Schema="dbo">
       <DefiningQuery>SELECT 

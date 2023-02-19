@@ -12,6 +12,15 @@
           <Property Name="idPers" Type="int" Nullable="false" />
           <Property Name="Genre" Type="nchar" MaxLength="10" />
         </EntityType>
+        <EntityType Name="ComplementMesurefemme">
+          <Key>
+            <PropertyRef Name="idClient" />
+          </Key>
+          <Property Name="idClient" Type="int" Nullable="false" />
+          <Property Name="dessousPoit" Type="float" />
+          <Property Name="creteslliaque" Type="float" />
+          <Property Name="LDos" Type="float" />
+        </EntityType>
         <EntityType Name="Login">
           <Key>
             <PropertyRef Name="idLogin" />
@@ -19,6 +28,30 @@
           <Property Name="idLogin" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="utilisateur" Type="nchar" MaxLength="100" />
           <Property Name="mdpasse" Type="nchar" MaxLength="100" />
+        </EntityType>
+        <EntityType Name="Mesure">
+          <Key>
+            <PropertyRef Name="idClient" />
+          </Key>
+          <Property Name="idClient" Type="int" Nullable="false" />
+          <Property Name="tete" Type="float" />
+          <Property Name="cou" Type="float" />
+          <Property Name="epaule" Type="float" />
+          <Property Name="LBras" Type="float" />
+          <Property Name="poitrine" Type="float" />
+          <Property Name="hanches" Type="float" />
+          <Property Name="LCorps" Type="float" />
+          <Property Name="cuisse" Type="float" />
+          <Property Name="genou" Type="float" />
+          <Property Name="mollet" Type="float" />
+          <Property Name="cheville" Type="float" />
+          <Property Name="biceps" Type="float" />
+          <Property Name="coude" Type="float" />
+          <Property Name="avantBras" Type="float" />
+          <Property Name="poignetCoude" Type="float" />
+          <Property Name="entreJambe" Type="float" />
+          <Property Name="coutureExt" Type="float" />
+          <Property Name="hTotale" Type="float" />
         </EntityType>
         <EntityType Name="Personne">
           <Key>
@@ -38,16 +71,18 @@ avertissement 6002: La table/vue 'bdgestcoutur.dbo.ViewClient' n'a pas de clé p
             <PropertyRef Name="idPers" />
           </Key>
           <Property Name="idPers" Type="int" Nullable="false" />
-          <Property Name="NomPers" Type="nchar" MaxLength="80" />
-          <Property Name="PrenomPers" Type="nchar" MaxLength="80" />
-          <Property Name="AdressPers" Type="nchar" MaxLength="150" />
+          <Property Name="NomPers" Type="nchar" MaxLength="20" />
+          <Property Name="PrenomPers" Type="nchar" MaxLength="100" />
+          <Property Name="AdressPers" Type="nchar" MaxLength="100" />
           <Property Name="TelPers" Type="nchar" MaxLength="10" />
-          <Property Name="EmailPers" Type="nchar" MaxLength="80" />
+          <Property Name="EmailPers" Type="nchar" MaxLength="50" />
           <Property Name="Genre" Type="nchar" MaxLength="10" />
         </EntityType>
         <EntityContainer Name="bdgestcouturModelStoreContainer">
           <EntitySet Name="Client" EntityType="Self.Client" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="ComplementMesurefemme" EntityType="Self.ComplementMesurefemme" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Login" EntityType="Self.Login" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Mesure" EntityType="Self.Mesure" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Personne" EntityType="Self.Personne" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="ViewClient" EntityType="Self.ViewClient" store:Type="Views" store:Schema="dbo">
             <DefiningQuery>SELECT 
@@ -81,17 +116,19 @@ avertissement 6002: La table/vue 'bdgestcoutur.dbo.ViewClient' n'a pas de clé p
           <EntitySet Name="ViewClient" EntityType="bdgestcouturModel.ViewClient" />
           <EntitySet Name="Client" EntityType="bdgestcouturModel.Client" />
           <EntitySet Name="Login" EntityType="bdgestcouturModel.Login" />
+          <EntitySet Name="ComplementMesurefemme" EntityType="bdgestcouturModel.ComplementMesurefemme" />
+          <EntitySet Name="Mesure" EntityType="bdgestcouturModel.Mesure" />
         </EntityContainer>
         <EntityType Name="ViewClient">
           <Key>
             <PropertyRef Name="idPers" />
           </Key>
           <Property Name="idPers" Type="Int32" Nullable="false" />
-          <Property Name="NomPers" Type="String" MaxLength="80" FixedLength="true" Unicode="true" />
-          <Property Name="PrenomPers" Type="String" MaxLength="80" FixedLength="true" Unicode="true" />
-          <Property Name="AdressPers" Type="String" MaxLength="150" FixedLength="true" Unicode="true" />
+          <Property Name="NomPers" Type="String" MaxLength="20" FixedLength="true" Unicode="true" />
+          <Property Name="PrenomPers" Type="String" MaxLength="100" FixedLength="true" Unicode="true" />
+          <Property Name="AdressPers" Type="String" MaxLength="100" FixedLength="true" Unicode="true" />
           <Property Name="TelPers" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
-          <Property Name="EmailPers" Type="String" MaxLength="80" FixedLength="true" Unicode="true" />
+          <Property Name="EmailPers" Type="String" MaxLength="50" FixedLength="true" Unicode="true" />
           <Property Name="Genre" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
         </EntityType>
         <EntityType Name="Client">
@@ -108,6 +145,39 @@ avertissement 6002: La table/vue 'bdgestcoutur.dbo.ViewClient' n'a pas de clé p
           <Property Name="idLogin" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="utilisateur" Type="String" MaxLength="100" FixedLength="true" Unicode="true" />
           <Property Name="mdpasse" Type="String" MaxLength="100" FixedLength="true" Unicode="true" />
+        </EntityType>
+        <EntityType Name="ComplementMesurefemme">
+          <Key>
+            <PropertyRef Name="idClient" />
+          </Key>
+          <Property Name="idClient" Type="Int32" Nullable="false" />
+          <Property Name="dessousPoit" Type="Double" />
+          <Property Name="creteslliaque" Type="Double" />
+          <Property Name="LDos" Type="Double" />
+        </EntityType>
+        <EntityType Name="Mesure">
+          <Key>
+            <PropertyRef Name="idClient" />
+          </Key>
+          <Property Name="idClient" Type="Int32" Nullable="false" />
+          <Property Name="tete" Type="Double" />
+          <Property Name="cou" Type="Double" />
+          <Property Name="epaule" Type="Double" />
+          <Property Name="LBras" Type="Double" />
+          <Property Name="poitrine" Type="Double" />
+          <Property Name="hanches" Type="Double" />
+          <Property Name="LCorps" Type="Double" />
+          <Property Name="cuisse" Type="Double" />
+          <Property Name="genou" Type="Double" />
+          <Property Name="mollet" Type="Double" />
+          <Property Name="cheville" Type="Double" />
+          <Property Name="biceps" Type="Double" />
+          <Property Name="coude" Type="Double" />
+          <Property Name="avantBras" Type="Double" />
+          <Property Name="poignetCoude" Type="Double" />
+          <Property Name="entreJambe" Type="Double" />
+          <Property Name="coutureExt" Type="Double" />
+          <Property Name="hTotale" Type="Double" />
         </EntityType>
       </Schema>
     </edmx:ConceptualModels>
@@ -154,6 +224,41 @@ avertissement 6002: La table/vue 'bdgestcoutur.dbo.ViewClient' n'a pas de clé p
                 <ScalarProperty Name="mdpasse" ColumnName="mdpasse" />
                 <ScalarProperty Name="utilisateur" ColumnName="utilisateur" />
                 <ScalarProperty Name="idLogin" ColumnName="idLogin" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ComplementMesurefemme">
+            <EntityTypeMapping TypeName="bdgestcouturModel.ComplementMesurefemme">
+              <MappingFragment StoreEntitySet="ComplementMesurefemme">
+                <ScalarProperty Name="LDos" ColumnName="LDos" />
+                <ScalarProperty Name="creteslliaque" ColumnName="creteslliaque" />
+                <ScalarProperty Name="dessousPoit" ColumnName="dessousPoit" />
+                <ScalarProperty Name="idClient" ColumnName="idClient" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Mesure">
+            <EntityTypeMapping TypeName="bdgestcouturModel.Mesure">
+              <MappingFragment StoreEntitySet="Mesure">
+                <ScalarProperty Name="hTotale" ColumnName="hTotale" />
+                <ScalarProperty Name="coutureExt" ColumnName="coutureExt" />
+                <ScalarProperty Name="entreJambe" ColumnName="entreJambe" />
+                <ScalarProperty Name="poignetCoude" ColumnName="poignetCoude" />
+                <ScalarProperty Name="avantBras" ColumnName="avantBras" />
+                <ScalarProperty Name="coude" ColumnName="coude" />
+                <ScalarProperty Name="biceps" ColumnName="biceps" />
+                <ScalarProperty Name="cheville" ColumnName="cheville" />
+                <ScalarProperty Name="mollet" ColumnName="mollet" />
+                <ScalarProperty Name="genou" ColumnName="genou" />
+                <ScalarProperty Name="cuisse" ColumnName="cuisse" />
+                <ScalarProperty Name="LCorps" ColumnName="LCorps" />
+                <ScalarProperty Name="hanches" ColumnName="hanches" />
+                <ScalarProperty Name="poitrine" ColumnName="poitrine" />
+                <ScalarProperty Name="LBras" ColumnName="LBras" />
+                <ScalarProperty Name="epaule" ColumnName="epaule" />
+                <ScalarProperty Name="cou" ColumnName="cou" />
+                <ScalarProperty Name="tete" ColumnName="tete" />
+                <ScalarProperty Name="idClient" ColumnName="idClient" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

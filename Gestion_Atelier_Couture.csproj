@@ -55,6 +55,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="App_Code\Helpers.cs" />
     <Compile Include="Connexion.cs">
       <SubType>Form</SubType>
     </Compile>
